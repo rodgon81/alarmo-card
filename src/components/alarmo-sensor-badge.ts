@@ -31,7 +31,7 @@ class AlarmoSensorBadge extends LitElement {
   protected render(): TemplateResult {
     if (!this.hass || !this.entity) return html``;
     const validEntity = this.entity in this.hass.states;
-    let stateObj = { ...this.hass.states[this.entity] } as HassEntity;
+    let stateObj = { ...this.hass.states[this.entity] };
     if (this.state !== undefined) stateObj = { ...stateObj, state: this.state };
     const icon = validEntity ? stateIcon(stateObj) : 'mdi:help-circle-outline';
     const value = validEntity ? computeStateDisplay(

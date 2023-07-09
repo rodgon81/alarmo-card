@@ -58,7 +58,7 @@ export enum AlarmoEvents {
   TriggerTimeExpired = 'trigger_time_expired',
 }
 
-export const EVENT = 'alarmo_updated';
+export const EVENT = 'hikvision_alarm/updated';
 
 export const PENDING_STATES = ['arming', 'pending'];
 
